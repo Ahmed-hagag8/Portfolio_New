@@ -16,42 +16,67 @@ interface Role {
 
 const ROLES: Role[] = [
   {
-    company: 'Northwind Studio',
-    role: 'Senior Full-Stack Engineer',
-    period: '2023 — Present',
-    location: 'San Francisco · Hybrid',
+    company: 'NTI',
+    role: 'Full-Stack Web Developer Intern',
+    period: '05/2026 — 08/2026',
+    location: 'Onsite',
     description:
-      'Lead engineer on a multi-tenant SaaS analytics platform. Own the frontend architecture and a chunk of the backend services.',
+      'Developed and maintained enterprise-grade web applications utilizing Laravel, React, PHP, and MySQL to deliver reliable and scalable solutions.',
     highlights: [
-      'Cut initial bundle size by 38% with route-level code splitting & RSC',
-      'Built the design system used by 5 product teams',
-      'Mentored 3 engineers; led weekly architecture reviews',
+      'Developed scalable full-stack features using Laravel and React',
+      'Applied software engineering best practices throughout the development lifecycle',
+      'Enhanced user experience and system reliability',
     ],
   },
   {
-    company: 'Cobalt Labs',
-    role: 'Full-Stack Engineer',
-    period: '2021 — 2023',
+    company: 'CREATIEVO',
+    role: 'Back-End Developer Intern',
+    period: '10/2025 — 03/2026',
+    location: 'Onsite',
+    description:
+      'Engineered and maintained high-performance web applications utilizing the Laravel framework and MySQL databases.',
+    highlights: [
+      'Architected secure RESTful APIs and facilitated third-party integrations',
+      'Optimized database query structures, resulting in faster data retrieval',
+      'Improved overall application responsiveness',
+    ],
+  },
+  {
+    company: 'X-Clan',
+    role: 'Back-End Developer Intern',
+    period: '09/2025 — 10/2025',
     location: 'Remote',
     description:
-      'Shipped customer-facing features for a developer-tools startup. Owned the dashboard rewrite end-to-end.',
+      'Developed robust back-end infrastructure for mobile applications, integrating ML and DL models into the Laravel ecosystem.',
     highlights: [
-      'Migrated legacy CRA app to Next.js App Router with zero downtime',
-      'Built a realtime collaboration feature using CRDTs',
-      'Reduced p95 API latency from 480ms to 90ms',
+      'Built scalable RESTful APIs and implemented microservices',
+      'Enhanced system modularity by transitioning monolithic features to microservices',
+      'Improved deployment flexibility',
     ],
   },
   {
-    company: 'Field & Co.',
-    role: 'Frontend Engineer',
-    period: '2019 — 2021',
-    location: 'New York · On-site',
+    company: 'CREATIVA',
+    role: 'Full-Stack Web Developer Intern',
+    period: '08/2025 — 09/2025',
+    location: 'Remote',
     description:
-      'Built marketing sites and product UIs for early-stage clients. First job out of college — learned a ton, fast.',
+      'Designed and managed dynamic web applications by leveraging Laravel for back-end logic and MySQL for data persistence.',
     highlights: [
-      'Delivered 20+ client sites with a 99% Lighthouse score',
-      'Designed and built the internal component library',
-      'Wrote the team\'s first a11y checklist',
+      'Developed responsive and user-centric front-end interfaces using Bootstrap and React.js',
+      'Reduced front-end load times by implementing efficient React component structures',
+      'Created a library of reusable UI elements',
+    ],
+  },
+  {
+    company: 'New Mansoura University',
+    role: 'B.Sc. Software Engineering',
+    period: 'Graduating 2026',
+    location: 'Mansoura, Egypt',
+    description:
+      'Faculty of Computer Science and Engineering – Software Engineering Division. CGPA: 3.0',
+    highlights: [
+      'Key Coursework: Data Structures & Algorithms, Database Management',
+      'Web Development, API Design, and Software Engineering',
     ],
   },
 ]
@@ -126,3 +151,4 @@ export function Experience() {
     </section>
   )
 }
+

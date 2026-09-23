@@ -17,48 +17,44 @@ const SKILL_GROUPS = [
   {
     Icon: Code2,
     title: 'Languages',
-    items: ['TypeScript', 'JavaScript', 'Python', 'Go', 'SQL'],
+    items: ['PHP', 'JavaScript', 'SQL', 'HTML5', 'CSS3'],
   },
   {
     Icon: Layers,
     title: 'Frontend',
-    items: ['React', 'Next.js', 'Tailwind', 'Framer Motion', 'shadcn/ui'],
+    items: ['React', 'Vue.js', 'jQuery', 'Bootstrap'],
   },
   {
     Icon: Database,
     title: 'Backend',
-    items: ['Node.js', 'PostgreSQL', 'Prisma', 'tRPC', 'Redis'],
+    items: ['Laravel', 'MySQL', 'RESTful APIs', 'Microservices'],
   },
   {
     Icon: Cloud,
     title: 'Infra',
-    items: ['AWS', 'Docker', 'Vercel', 'GitHub Actions', 'Cloudflare'],
+    items: ['ngrok', 'Docker', 'Railway'],
   },
   {
-    Icon: PenTool,
-    title: 'Design',
-    items: ['Figma', 'Design systems', 'Tokens', 'Motion', 'A11y'],
+    Icon: Database,
+    title: 'Databases',
+    items: ['MySQL', 'SQLite', 'PostgreSQL'],
   },
   {
     Icon: GitBranch,
     title: 'Workflow',
-    items: ['Git', 'Trunk-based', 'Code review', 'Storybook', 'Linear'],
+    items: ['Git', 'GitHub', 'Composer', 'Postman'],
   },
 ]
 
 const TOOLS = [
   'VS Code',
-  'Neovim',
-  'Figma',
-  'Linear',
-  'Vercel',
+  'Postman',
+  'Docker',
+  'Git',
   'GitHub',
-  'Notion',
-  'Raycast',
-  'Arc',
-  'iTerm',
-  'Cursor',
-  'V0',
+  'Composer',
+  'ngrok',
+  'Railway',
 ]
 
 export function Skills() {

@@ -25,78 +25,78 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
-    name: 'Lumen',
-    tagline: 'Realtime analytics dashboard',
+    name: 'Sal7ly',
+    tagline: 'On-demand marketplace system',
     description:
-      'A privacy-first analytics platform that ingests millions of events per minute. Built a streaming aggregation layer in Go and a buttery-smooth React dashboard with virtualized charts.',
-    tags: ['Next.js', 'Go', 'ClickHouse', 'WebSockets'],
-    year: '2024',
+      'Developed a scalable on-demand marketplace system, integrating AI models to enhance user experience through dynamic price prediction, automated image detection, and AI chat support. Engineered complex multi-role workflows and a comprehensive financial ecosystem.',
+    tags: ['Laravel', 'MySQL', 'Stripe', 'WebSockets', 'Redis', 'React'],
+    year: '2026',
     href: '#',
     repo: '#',
     featured: true,
     accent: 'from-amber-500/20 via-amber-500/5 to-transparent',
-    initials: 'Lu',
+    initials: 'Sa',
   },
   {
-    name: 'Atlas',
-    tagline: 'Design system & component library',
+    name: 'D-store',
+    tagline: 'Full-stack e-commerce platform',
     description:
-      'A headless component library with 60+ accessible primitives, design tokens, and Storybook docs. Adopted by five product teams.',
-    tags: ['React', 'Radix', 'Storybook', 'TS'],
-    year: '2024',
+      'Developed a full-stack e-commerce platform, enabling users to browse products, add items to cart, place orders, and track purchase history. Implemented secure authentication, payment integration, and a role-based admin dashboard.',
+    tags: ['React.js', 'Laravel', 'SQL', 'RESTful APIs'],
+    year: '2026',
     href: '#',
     repo: '#',
     featured: true,
     accent: 'from-rose-500/20 via-rose-500/5 to-transparent',
-    initials: 'At',
+    initials: 'Ds',
   },
   {
-    name: 'Driftwood',
-    tagline: 'Markdown-first note app',
+    name: 'Car Services',
+    tagline: 'Car service management platform',
     description:
-      'A local-first note-taking app with bidirectional links, full-text search, and end-to-end encrypted sync. Open source on GitHub.',
-    tags: ['Tauri', 'Rust', 'SQLite', 'CRDT'],
-    year: '2023',
+      'Developed a full-stack car service management platform, enabling users to book vehicle maintenance appointments, browse available services, and track service history with seamless frontend-backend integration.',
+    tags: ['React.js', 'Laravel', 'SQL', 'RESTful APIs'],
+    year: '2025',
     href: '#',
     repo: '#',
     accent: 'from-teal-500/20 via-teal-500/5 to-transparent',
-    initials: 'Dr',
+    initials: 'Cs',
   },
   {
-    name: 'Pulse',
-    tagline: 'Uptime monitoring, reimagined',
+    name: 'SEED',
+    tagline: 'Online assessment system',
     description:
-      'A globally distributed uptime monitor with on-call schedules, status pages, and a slick CLI. Built on Cloudflare Workers.',
-    tags: ['Workers', 'D1', 'TypeScript', 'CLI'],
-    year: '2023',
+      'Developed a scalable online assessment system, integrating AI microservices for automated evaluation of MCQ, essay, and voice-based answers. Focused on clean architecture and extensibility.',
+    tags: ['Python', 'Laravel', 'SQL', 'ngrok'],
+    year: '2025',
     href: '#',
     repo: '#',
     accent: 'from-violet-500/20 via-violet-500/5 to-transparent',
-    initials: 'Pu',
+    initials: 'Se',
   },
   {
-    name: 'Forge',
-    tagline: 'CI/CD for design tokens',
+    name: 'D-Clinic',
+    tagline: 'Clinic management platform',
     description:
-      'A GitHub app that syncs Figma variables to your codebase as typed tokens. Closes the loop between designers and engineers.',
-    tags: ['Node', 'GitHub App', 'Figma API'],
-    year: '2022',
+      'Developed a full-stack clinic management platform to streamline patient and appointment management. Implemented secure authentication, patient records, doctor schedules, and appointment booking.',
+    tags: ['React.js', 'Laravel', 'SQL'],
+    year: '2025',
     href: '#',
     repo: '#',
     accent: 'from-emerald-500/20 via-emerald-500/5 to-transparent',
-    initials: 'Fo',
+    initials: 'Dc',
   },
   {
-    name: 'Cartograph',
-    tagline: 'Interactive map explorer',
+    name: 'Star Movies',
+    tagline: 'Movie streaming platform',
     description:
-      'A WebGL-powered geospatial explorer for 10M+ points. Custom shaders, tile streaming, and a buttery 60fps UX.',
-    tags: ['WebGL', 'MapLibre', 'Rust', 'WASM'],
-    year: '2022',
+      'Developed a full-stack movie streaming platform with features including user authentication, movie catalog, search, filtering, watchlists, and ratings applying MVC architecture.',
+    tags: ['React.js', 'Laravel', 'SQL', 'RESTful APIs'],
+    year: '2025',
     href: '#',
     repo: '#',
     accent: 'from-sky-500/20 via-sky-500/5 to-transparent',
-    initials: 'Ca',
+    initials: 'Sm',
   },
 ]
 
@@ -158,37 +158,7 @@ function ProjectCard({ project }: { project: Project }) {
               </Badge>
             </li>
           ))}
-        </ul>
-
-        {/* Footer */}
-        <div className="mt-6 flex items-center gap-2 border-t border-border/40 pt-4">
-          <Button
-            asChild
-            size="sm"
-            variant="ghost"
-            className="rounded-full px-3 text-muted-foreground hover:text-foreground"
-          >
-            <a href={project.href} target="_blank" rel="noreferrer noopener">
-              Live demo
-              <ArrowUpRight className="ml-1 h-3.5 w-3.5" />
-            </a>
-          </Button>
-          {project.repo && (
-            <Button
-              asChild
-              size="sm"
-              variant="ghost"
-              className="rounded-full px-3 text-muted-foreground hover:text-foreground"
-              aria-label="Source code"
-            >
-              <a href={project.repo} target="_blank" rel="noreferrer noopener">
-                <Github className="h-3.5 w-3.5" />
-                <span className="ml-1">Code</span>
-              </a>
-            </Button>
-          )}
-        </div>
-      </div>
+        </ul></div>
     </motion.article>
   )
 }
@@ -224,7 +194,7 @@ export function Projects() {
         >
           <Button asChild variant="outline" size="lg" className="rounded-full">
             <a
-              href="https://github.com"
+              href="https://github.com/Ahmed-hagag8"
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -237,3 +207,4 @@ export function Projects() {
     </section>
   )
 }
+

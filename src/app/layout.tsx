@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Rivera — Full-Stack Developer & UI Engineer",
+  title: "Ahmed Hagag || Full-Stack Developer",
   description:
-    "Portfolio of Alex Rivera, a full-stack developer crafting thoughtful, performant digital products with React, Next.js, and modern web technologies.",
+    "Portfolio of Ahmed Hagag, a full-stack developer crafting scalable web applications and digital experiences.",
   keywords: [
-    "Alex Rivera",
+    "Ahmed Hagag",
     "portfolio",
     "full-stack developer",
     "UI engineer",
@@ -28,16 +28,16 @@ export const metadata: Metadata = {
     "React",
     "TypeScript",
   ],
-  authors: [{ name: "Alex Rivera" }],
+  authors: [{ name: "Ahmed Hagag" }],
   openGraph: {
-    title: "Alex Rivera — Full-Stack Developer & UI Engineer",
+    title: "Ahmed Hagag â€” Full-Stack Developer & UI Engineer",
     description:
       "Crafting thoughtful, performant digital products with modern web technology.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alex Rivera — Full-Stack Developer & UI Engineer",
+    title: "Ahmed Hagag â€” Full-Stack Developer & UI Engineer",
     description:
       "Crafting thoughtful, performant digital products with modern web technology.",
   },
@@ -67,3 +67,4 @@ export default function RootLayout({
     </html>
   );
 }
+

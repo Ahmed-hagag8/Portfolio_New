@@ -1,9 +1,11 @@
-'use client'
+﻿'use client'
 
 import * as React from 'react'
 import { motion } from 'framer-motion'
 import { Mail, ArrowRight, MapPin, Clock, Check } from 'lucide-react'
 import { toast } from 'sonner'
+import emailjs from '@emailjs/browser'
+
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -16,13 +18,13 @@ const CONTACT_INFO = [
   {
     Icon: Mail,
     label: 'Email',
-    value: 'hello@alexrivera.dev',
-    href: 'mailto:hello@alexrivera.dev',
+    value: 'ahmed.aboelhagag.dev@gmail.com',
+    href: 'mailto:ahmed.aboelhagag.dev@gmail.com',
   },
   {
     Icon: MapPin,
     label: 'Location',
-    value: 'San Francisco, CA',
+    value: 'Cairo, Egypt',
     href: undefined,
   },
   {
@@ -40,15 +42,28 @@ export function Contact() {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setSending(true)
-    // Simulate a network request — wire to a real endpoint when ready
-    await new Promise((r) => setTimeout(r, 900))
-    setSending(false)
-    setSent(true)
-    toast.success('Message sent!', {
-      description: 'Thanks — I\u2019ll get back to you within 24 hours.',
-    })
-    ;(e.target as HTMLFormElement).reset()
-    setTimeout(() => setSent(false), 4000)
+    
+    try {
+      await emailjs.sendForm(
+        'service_8nzngrr',
+        'template_x27jmdl',
+        e.currentTarget,
+        'QNMyyAylUwkp8QSCw'
+      )
+      
+      setSent(true)
+      toast.success('Message sent!', {
+        description: 'Thanks — I’ll get back to you within 24 hours.',
+      })
+      ;(e.target as HTMLFormElement).reset()
+      setTimeout(() => setSent(false), 4000)
+    } catch (error) {
+      toast.error('Failed to send message.', {
+        description: 'Please try again later or contact me directly via email.',
+      })
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -164,7 +179,7 @@ export function Contact() {
                 <Input
                   id="subject"
                   name="subject"
-                  placeholder="A new product, a question, a hello…"
+                  placeholder="A new product, a question, a helloâ€¦"
                   required
                   className="bg-background/50"
                 />
@@ -199,7 +214,7 @@ export function Contact() {
                   ) : sending ? (
                     <>
                       <span className="mr-2 h-3 w-3 animate-spin rounded-full border-2 border-current border-t-transparent" />
-                      Sending…
+                      Sendingâ€¦
                     </>
                   ) : (
                     <>
@@ -216,3 +231,5 @@ export function Contact() {
     </section>
   )
 }
+
+

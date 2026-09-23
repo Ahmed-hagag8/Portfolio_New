@@ -7,9 +7,8 @@ import { Button } from '@/components/ui/button'
 import { fadeUp, staggerContainer } from './motion'
 
 const SOCIALS = [
-  { label: 'GitHub', href: 'https://github.com', Icon: Github },
-  { label: 'LinkedIn', href: 'https://linkedin.com', Icon: Linkedin },
-  { label: 'Twitter', href: 'https://twitter.com', Icon: Twitter },
+  { label: 'GitHub', href: 'https://github.com/Ahmed-hagag8', Icon: Github },
+  { label: 'LinkedIn', href: 'https://linkedin.com/in/ahmed-m-hagag', Icon: Linkedin },
 ]
 
 export function Hero() {
@@ -53,17 +52,15 @@ export function Hero() {
           variants={fadeUp}
           className="mt-6 text-balance text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl"
         >
-          Hey, I&apos;m Alex{' '}
-          <span className="text-gradient">Rivera.</span>
+          Hey, I&apos;m Ahmed{' '}
+          <span className="text-gradient">Hagag.</span>
         </motion.h1>
 
         <motion.p
           variants={fadeUp}
           className="mt-6 max-w-2xl text-pretty text-lg text-muted-foreground sm:text-xl"
         >
-          I&apos;m a full-stack developer & UI engineer crafting thoughtful,
-          performant digital products. I bridge design and engineering — turning
-          fuzzy ideas into polished interfaces that feel effortless to use.
+          I&apos;m a Full-Stack Web Developer specializing in Laravel, PHP, React, and MySQL. I bring a strong backend mindset with the ability to work across the full application lifecycle.
         </motion.p>
 
         <motion.div
@@ -71,11 +68,11 @@ export function Hero() {
           className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-muted-foreground"
         >
           <span className="inline-flex items-center gap-1.5">
-            <MapPin className="h-4 w-4 text-accent" /> San Francisco, CA
+            <MapPin className="h-4 w-4 text-accent" /> Cairo, Egypt
           </span>
           <span className="inline-flex items-center gap-1.5">
             <span className="h-1 w-1 rounded-full bg-muted-foreground/60" />
-            6+ years of experience
+            1+ years of experience
           </span>
         </motion.div>
 
@@ -122,9 +119,9 @@ export function Hero() {
           className="mt-16 grid grid-cols-2 gap-4 border-t border-border/50 pt-8 sm:grid-cols-4"
         >
           {[
-            { value: '40+', label: 'Projects shipped' },
-            { value: '12', label: 'Open-source repos' },
-            { value: '6+', label: 'Years of experience' },
+            { value: '7+', label: 'Projects shipped' },
+            { value: '5+', label: 'Internships' },
+            { value: '1+', label: 'Years of experience' },
             { value: '∞', label: 'Cups of coffee' },
           ].map((s) => (
             <div key={s.label} className="flex flex-col">

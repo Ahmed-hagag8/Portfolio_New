@@ -66,7 +66,7 @@ export function Navbar() {
             <Sparkles className="h-4 w-4" />
           </span>
           <span className="hidden text-sm font-semibold tracking-tight sm:inline-block">
-            Alex Rivera
+            Ahmed Hagag
           </span>
         </a>
 

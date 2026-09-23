@@ -9,27 +9,27 @@ import { SectionHeading } from './section-heading'
 const TRAITS = [
   {
     Icon: Code2,
-    title: 'Engineering',
+    title: 'Full-Stack Engineering',
     description:
-      'Type-safe, well-tested code with a bias for simplicity. I reach for the right tool, not the trendy one.',
-  },
-  {
-    Icon: Palette,
-    title: 'Design sense',
-    description:
-      'Comfortable in Figma as in the IDE. I sweat the details — spacing, type rhythm, motion, accessibility.',
+      'Writing clean, maintainable code. Specializing in Laravel, PHP, React, and MySQL to deliver reliable and scalable solutions.',
   },
   {
     Icon: Rocket,
-    title: 'Shipping',
+    title: 'Scalable Systems',
     description:
-      'I move quickly without breaking things. Pragmatic scope, fast feedback loops, weekly demos.',
+      'Focusing on building secure RESTful APIs, integrating third-party services, AI solutions, payments, and real-time features.',
+  },
+  {
+    Icon: Palette,
+    title: 'Front-End Interfaces',
+    description:
+      'Developing responsive, user-centric interfaces using React and Bootstrap to enhance user experience.',
   },
   {
     Icon: Coffee,
-    title: 'Collaboration',
+    title: 'Continuous Learning',
     description:
-      'Async-first communicator. I document decisions, write clear PRs, and mentor junior engineers.',
+      'Proactive, learning-oriented mindset. Eager to take ownership of challenges and improve both the product and the process.',
   },
 ]
 
@@ -81,22 +81,13 @@ export function About() {
               </h3>
               <div className="mt-4 space-y-4 text-sm text-muted-foreground leading-relaxed sm:text-base">
                 <p>
-                  I&apos;ve been building for the web for over six years — first
-                  as a frontend-obsessed engineer at a series B startup, then as
-                  a full-stack generalist at a small product studio. Along the
-                  way I&apos;ve shipped design systems, real-time dashboards,
-                  internal tools, and the occasional weekend side project.
+                  I am a Full-Stack Web Developer specializing in Laravel, PHP, React, and MySQL, with hands-on experience building secure, scalable, and real-world web applications. 
                 </p>
                 <p>
-                  These days I&apos;m most interested in the seam between
-                  design and engineering: motion systems, type, design tokens,
-                  and the workflow that lets small teams ship like big ones. I
-                  love a tough accessibility bug and a clean git history.
+                  I bring a strong backend mindset with the ability to work across the full application lifecycle — from designing databases and RESTful APIs to integrating frontend interfaces, third-party services, AI solutions, payments, and real-time features.
                 </p>
                 <p>
-                  Outside the editor you&apos;ll find me on long runs through
-                  Golden Gate Park, sketching typography, or arguing about
-                  monospace fonts.
+                  I focus on writing clean, maintainable code, solving problems efficiently, and building systems that are reliable, scalable, and valuable to the business. I am eager to bring a proactive, learning-oriented mindset to a team where I can contribute from day one.
                 </p>
               </div>
             </div>
@@ -107,7 +98,7 @@ export function About() {
                   Currently
                 </div>
                 <div className="mt-1 text-sm font-medium">
-                  Senior Engineer @ Northwind Studio
+                  Full-Stack Web Developer
                 </div>
               </div>
               <div className="rounded-2xl border border-border/60 p-4">
@@ -115,7 +106,7 @@ export function About() {
                   Focus
                 </div>
                 <div className="mt-1 text-sm font-medium">
-                  Design systems &amp; DX tooling
+                  Laravel, React &amp; System Architecture
                 </div>
               </div>
               <div className="rounded-2xl border border-border/60 p-4">
@@ -123,7 +114,7 @@ export function About() {
                   Learning
                 </div>
                 <div className="mt-1 text-sm font-medium">
-                  Rust, WebGL shaders, type design
+                  Microservices &amp; AI Integration
                 </div>
               </div>
             </div>
