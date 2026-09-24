@@ -10,7 +10,7 @@ import { ScrollProgress } from '@/components/portfolio/animations'
 
 export default function Home() {
   return (
-    <div className="relative flex min-h-screen flex-col">
+    <div className="relative flex min-h-screen flex-col overflow-x-hidden">
       {/* Scroll progress indicator */}
       <ScrollProgress />
 
