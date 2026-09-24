@@ -7,8 +7,9 @@ import { ArrowUpRight, Github, Star } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { fadeUp, staggerContainer } from './motion'
+import { fadeUp, scaleIn, staggerContainer } from './motion'
 import { SectionHeading } from './section-heading'
+import { MagneticHover } from './animations'
 
 interface Project {
   name: string
@@ -21,6 +22,7 @@ interface Project {
   featured?: boolean
   accent: string
   initials: string
+  iconBg: string
 }
 
 const PROJECTS: Project[] = [
@@ -36,6 +38,7 @@ const PROJECTS: Project[] = [
     featured: true,
     accent: 'from-amber-500/20 via-amber-500/5 to-transparent',
     initials: 'Sa',
+    iconBg: 'from-amber-500 to-orange-600',
   },
   {
     name: 'D-store',
@@ -49,6 +52,7 @@ const PROJECTS: Project[] = [
     featured: true,
     accent: 'from-rose-500/20 via-rose-500/5 to-transparent',
     initials: 'Ds',
+    iconBg: 'from-rose-500 to-pink-600',
   },
   {
     name: 'Car Services',
@@ -61,6 +65,7 @@ const PROJECTS: Project[] = [
     repo: '#',
     accent: 'from-teal-500/20 via-teal-500/5 to-transparent',
     initials: 'Cs',
+    iconBg: 'from-teal-500 to-cyan-600',
   },
   {
     name: 'SEED',
@@ -73,6 +78,7 @@ const PROJECTS: Project[] = [
     repo: '#',
     accent: 'from-violet-500/20 via-violet-500/5 to-transparent',
     initials: 'Se',
+    iconBg: 'from-violet-500 to-purple-600',
   },
   {
     name: 'D-Clinic',
@@ -85,6 +91,7 @@ const PROJECTS: Project[] = [
     repo: '#',
     accent: 'from-emerald-500/20 via-emerald-500/5 to-transparent',
     initials: 'Dc',
+    iconBg: 'from-emerald-500 to-green-600',
   },
   {
     name: 'Star Movies',
@@ -97,16 +104,17 @@ const PROJECTS: Project[] = [
     repo: '#',
     accent: 'from-sky-500/20 via-sky-500/5 to-transparent',
     initials: 'Sm',
+    iconBg: 'from-sky-500 to-blue-600',
   },
 ]
 
-function ProjectCard({ project }: { project: Project }) {
+function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
     <motion.article
-      variants={fadeUp}
-      whileHover={{ y: -4 }}
+      variants={scaleIn}
+      whileHover={{ y: -6, transition: { duration: 0.3 } }}
       className={cn(
-        'group relative overflow-hidden rounded-2xl border border-border/60 bg-card/40 backdrop-blur transition-colors hover:border-accent/40',
+        'group relative overflow-hidden rounded-2xl border border-border/60 bg-card/40 backdrop-blur transition-all duration-300 hover:border-accent/40 hover:shadow-xl hover:shadow-accent/5',
         project.featured && 'lg:col-span-2'
       )}
     >
@@ -114,31 +122,47 @@ function ProjectCard({ project }: { project: Project }) {
       <div
         aria-hidden
         className={cn(
-          'pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br opacity-70',
+          'pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br opacity-70 transition-opacity duration-500 group-hover:opacity-100',
           project.accent
         )}
+      />
+
+      {/* Top glow line */}
+      <div
+        aria-hidden
+        className="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent opacity-0 transition-opacity group-hover:opacity-100"
       />
 
       <div className="flex h-full flex-col p-6 sm:p-7">
         {/* Header */}
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-border/60 bg-background/60 text-sm font-semibold tracking-tight backdrop-blur">
+            <motion.div
+              whileHover={{ rotate: 6, scale: 1.1 }}
+              className={cn(
+                'flex h-12 w-12 items-center justify-center rounded-xl text-sm font-bold tracking-tight text-white shadow-lg bg-gradient-to-br',
+                project.iconBg
+              )}
+            >
               {project.initials}
-            </div>
+            </motion.div>
             <div>
               <h3 className="flex items-center gap-2 text-lg font-semibold">
                 {project.name}
                 {project.featured && (
-                  <span className="inline-flex items-center gap-1 rounded-full bg-accent/15 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-accent ring-1 ring-accent/30">
+                  <motion.span
+                    animate={{ rotate: [0, 10, -10, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
+                    className="inline-flex items-center gap-1 rounded-full bg-accent/15 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-accent ring-1 ring-accent/30"
+                  >
                     <Star className="h-2.5 w-2.5 fill-current" /> Featured
-                  </span>
+                  </motion.span>
                 )}
               </h3>
               <p className="text-xs text-muted-foreground">{project.tagline}</p>
             </div>
           </div>
-          <span className="text-xs text-muted-foreground">{project.year}</span>
+          <span className="text-xs text-muted-foreground font-mono">{project.year}</span>
         </div>
 
         {/* Description */}
@@ -148,17 +172,22 @@ function ProjectCard({ project }: { project: Project }) {
 
         {/* Tags */}
         <ul className="mt-5 flex flex-wrap gap-1.5">
-          {project.tags.map((tag) => (
-            <li key={tag}>
+          {project.tags.map((tag, j) => (
+            <motion.li
+              key={tag}
+              whileHover={{ scale: 1.08, y: -1 }}
+              transition={{ duration: 0.15 }}
+            >
               <Badge
                 variant="secondary"
-                className="bg-background/40 font-mono text-[11px] font-normal"
+                className="bg-background/40 font-mono text-[11px] font-normal transition-colors duration-200 hover:bg-accent/15 hover:text-accent cursor-default"
               >
                 {tag}
               </Badge>
-            </li>
+            </motion.li>
           ))}
-        </ul></div>
+        </ul>
+      </div>
     </motion.article>
   )
 }
@@ -166,6 +195,12 @@ function ProjectCard({ project }: { project: Project }) {
 export function Projects() {
   return (
     <section id="projects" className="relative px-6 py-24 sm:py-32">
+      {/* Decorative */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute right-0 top-1/4 -z-10 h-[500px] w-[400px] rounded-full bg-accent/5 blur-3xl"
+      />
+
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           eyebrow="Projects"
@@ -180,8 +215,8 @@ export function Projects() {
           viewport={{ once: true, margin: '-80px' }}
           className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-2"
         >
-          {PROJECTS.map((p) => (
-            <ProjectCard key={p.name} project={p} />
+          {PROJECTS.map((p, i) => (
+            <ProjectCard key={p.name} project={p} index={i} />
           ))}
         </motion.div>
 
@@ -192,19 +227,25 @@ export function Projects() {
           viewport={{ once: true, margin: '-80px' }}
           className="mt-10 flex justify-center"
         >
-          <Button asChild variant="outline" size="lg" className="rounded-full">
-            <a
-              href="https://github.com/Ahmed-hagag8"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <Github className="mr-2 h-4 w-4" />
-              See more on GitHub
-            </a>
-          </Button>
+          <MagneticHover strength={0.2}>
+            <Button asChild variant="outline" size="lg" className="rounded-full group relative overflow-hidden">
+              <a
+                href="https://github.com/Ahmed-hagag8"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <Github className="mr-2 h-4 w-4 transition-transform group-hover:rotate-12" />
+                See more on GitHub
+                <motion.span
+                  className="absolute inset-0 -z-10 bg-gradient-to-r from-accent/0 via-accent/10 to-accent/0"
+                  animate={{ x: ['-100%', '200%'] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
+                />
+              </a>
+            </Button>
+          </MagneticHover>
         </motion.div>
       </div>
     </section>
   )
 }
-

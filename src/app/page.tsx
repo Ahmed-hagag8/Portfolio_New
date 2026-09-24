@@ -6,10 +6,14 @@ import { Projects } from '@/components/portfolio/projects'
 import { Experience } from '@/components/portfolio/experience'
 import { Contact } from '@/components/portfolio/contact'
 import { Footer } from '@/components/portfolio/footer'
+import { ScrollProgress } from '@/components/portfolio/animations'
 
 export default function Home() {
   return (
     <div className="relative flex min-h-screen flex-col">
+      {/* Scroll progress indicator */}
+      <ScrollProgress />
+
       {/* Top-of-page gradient base */}
       <div
         aria-hidden

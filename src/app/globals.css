@@ -158,25 +158,57 @@
     backdrop-filter: blur(12px) saturate(140%);
     -webkit-backdrop-filter: blur(12px) saturate(140%);
   }
-  .text-gradient {
-    background: linear-gradient(
-      135deg,
-      var(--foreground) 0%,
-      var(--accent) 50%,
-      var(--foreground) 100%
-    );
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-  }
+}
+
+/* Gradient text — outside @layer to prevent Tailwind v4 from purging background-clip */
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--foreground) 0%,
+    var(--accent) 50%,
+    var(--foreground) 100%
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.text-gradient-animated {
+  background: linear-gradient(
+    135deg,
+    var(--accent) 0%,
+    oklch(0.7 0.18 320) 25%,
+    var(--accent) 50%,
+    oklch(0.75 0.15 200) 75%,
+    var(--accent) 100%
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradient-shift 6s ease-in-out infinite;
 }
 
 /* Subtle entrance animation */
 @keyframes float-in {
   0% { opacity: 0; transform: translateY(12px); }
   100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Animated gradient text shift */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glow pulse for accent elements */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px var(--accent), 0 0 40px color-mix(in oklch, var(--accent) 30%, transparent); }
+  50% { box-shadow: 0 0 30px var(--accent), 0 0 60px color-mix(in oklch, var(--accent) 50%, transparent); }
 }
 
 /* Custom scrollbar */
