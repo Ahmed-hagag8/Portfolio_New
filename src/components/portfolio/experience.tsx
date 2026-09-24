@@ -73,6 +73,20 @@ const ROLES: Role[] = [
     emoji: '🎨',
   },
   {
+    company: 'MCIT',
+    role: 'Full-Stack Web Developer Intern',
+    period: '06/2025 — 07/2025',
+    location: 'Remote',
+    description:
+      'Built and maintained enterprise-level web applications using .NET and SQL Server.',
+    highlights: [
+      'Built responsive front-end interfaces using Bootstrap.',
+      'Optimized client-side performance by implementing modular, memorized React component architectures and a library of reusable UI elements.',
+      'Enhanced data management and application performance through optimized SQL Server queries and modular, reusable application components.',
+    ],
+    emoji: '🌐',
+  },
+  {
     company: 'New Mansoura University',
     role: 'B.Sc. Software Engineering',
     period: 'Graduating 2026',
