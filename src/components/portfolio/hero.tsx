@@ -3,7 +3,8 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowDownRight, Github, Linkedin, MapPin, Download, ChevronDown } from 'lucide-react'
 import * as React from 'react'
-import Image from 'next/image'
+
+const basePath = process.env.NODE_ENV === 'production' ? '/Portfolio_New' : ''
 
 import { Button } from '@/components/ui/button'
 import { fadeUp, staggerContainer, popIn, slideInRight } from './motion'
@@ -199,12 +200,11 @@ export function Hero() {
               {/* Photo container */}
               <div className="relative h-64 w-64 sm:h-72 sm:w-72 lg:h-80 lg:w-80 overflow-hidden rounded-full border-2 border-accent/30 bg-card/50 p-1 backdrop-blur-sm">
                 <div className="h-full w-full overflow-hidden rounded-full">
-                  <Image
-                    src="/ahmed-hagag.png"
+                  <img
+                    src={`${basePath}/ahmed-hagag.png`}
                     alt="Ahmed Hagag"
                     width={320}
                     height={320}
-                    priority
                     className="h-full w-full object-cover object-top transition-transform duration-700 hover:scale-110"
                   />
                 </div>
