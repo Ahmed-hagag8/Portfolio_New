@@ -153,11 +153,13 @@
     -webkit-mask-image: radial-gradient(circle at 50% 30%, black 0%, transparent 70%);
     mask-image: radial-gradient(circle at 50% 30%, black 0%, transparent 70%);
   }
-  .glass {
-    background: color-mix(in oklch, var(--card) 70%, transparent);
-    backdrop-filter: blur(12px) saturate(140%);
-    -webkit-backdrop-filter: blur(12px) saturate(140%);
-  }
+}
+
+/* Glass effect for navbar — moved outside @layer for compatibility */
+.glass {
+  background-color: var(--card);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
 }
 
 /* Gradient text — outside @layer to prevent Tailwind v4 from purging background-clip */

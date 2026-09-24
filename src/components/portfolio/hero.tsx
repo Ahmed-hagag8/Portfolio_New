@@ -40,7 +40,7 @@ export function Hero() {
     <section
       ref={sectionRef}
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden px-6 pt-28 pb-16 sm:pt-32"
+      className="relative flex min-h-screen items-center overflow-hidden px-6 pt-32 pb-16 sm:pt-40"
     >
       {/* Animated backgrounds */}
       <GradientMesh />

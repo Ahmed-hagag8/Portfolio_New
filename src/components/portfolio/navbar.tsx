@@ -65,7 +65,7 @@ export function Navbar() {
           <span className="relative flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-accent to-accent/60 text-accent-foreground shadow-md shadow-accent/30">
             <Sparkles className="h-4 w-4" />
           </span>
-          <span className="hidden text-sm font-semibold tracking-tight sm:inline-block">
+          <span className="text-sm font-semibold tracking-tight">
             Ahmed Hagag
           </span>
         </a>
