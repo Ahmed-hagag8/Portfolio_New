@@ -23,7 +23,8 @@ const SOCIALS = [
 const ROLES = [
   'Full-Stack Developer',
   'Laravel Specialist',
-  'React Engineer',
+  'React & Next.js Engineer',
+  'Filament & WordPress Developer',
   'API Architect',
 ]
 
@@ -101,7 +102,7 @@ export function Hero() {
               variants={fadeUp}
               className="max-w-xl text-pretty text-base text-muted-foreground sm:text-lg"
             >
-              I&apos;m a Full-Stack Web Developer specializing in Laravel, PHP, React, and MySQL. I bring a strong backend mindset with the ability to work across the full application lifecycle.
+              I&apos;m a Full-Stack Web Developer (React–Laravel) specializing in Laravel, PHP, React, MySQL, WordPress, and Filament. I bring a strong backend mindset with the ability to work across the full application lifecycle.
             </motion.p>
 
             <motion.div
@@ -113,7 +114,7 @@ export function Hero() {
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <span className="h-1 w-1 rounded-full bg-muted-foreground/60" />
-                1+ years of experience
+                2+ years of experience
               </span>
             </motion.div>
 
@@ -217,7 +218,7 @@ export function Hero() {
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
               >
                 <span className="flex items-center gap-1.5">
-                  💻 Full-Stack Developer
+                  💻 Full-Stack Dev @ Union Group
                 </span>
               </motion.div>
 
@@ -228,7 +229,7 @@ export function Hero() {
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
               >
                 <span className="flex items-center gap-1.5">
-                  🚀 7+ Projects
+                  🚀 8+ Projects
                 </span>
               </motion.div>
             </div>
@@ -244,9 +245,9 @@ export function Hero() {
           className="mt-16 grid grid-cols-2 gap-4 border-t border-border/50 pt-8 sm:grid-cols-4"
         >
           {[
-            { value: '7+', label: 'Projects shipped' },
-            { value: '5+', label: 'Internships' },
-            { value: '1+', label: 'Years of experience' },
+            { value: '8+', label: 'Projects shipped' },
+            { value: '4', label: 'Internships' },
+            { value: '2+', label: 'Years of experience' },
             { value: '∞', label: 'Cups of coffee' },
           ].map((s) => (
             <motion.div

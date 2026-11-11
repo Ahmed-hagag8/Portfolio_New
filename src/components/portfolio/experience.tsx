@@ -17,6 +17,20 @@ interface Role {
 
 const ROLES: Role[] = [
   {
+    company: 'Union Group',
+    role: 'Full-Stack Developer',
+    period: '10/2026 — Present',
+    location: 'Cairo, Egypt',
+    description:
+      'Developing and maintaining scalable web applications and e-commerce platforms using Laravel, PHP, MySQL, WordPress, and React, supporting business operations and digital commerce.',
+    highlights: [
+      'Built backend services, RESTful APIs, database structures, and administrative dashboards using Laravel and Filament',
+      'Applied software engineering best practices to ensure maintainability and performance',
+      'Delivered scalable web solutions that streamline business operations, improve administrative efficiency, and enhance digital customer experiences',
+    ],
+    emoji: '💼',
+  },
+  {
     company: 'NTI',
     role: 'Full-Stack Web Developer Intern',
     period: '05/2026 — 08/2026',
@@ -24,9 +38,8 @@ const ROLES: Role[] = [
     description:
       'Developed and maintained enterprise-grade web applications utilizing Laravel, React, PHP, and MySQL to deliver reliable and scalable solutions.',
     highlights: [
-      'Developed scalable full-stack features using Laravel and React',
-      'Applied software engineering best practices throughout the development lifecycle',
-      'Enhanced user experience and system reliability',
+      'Developed scalable full-stack features using Laravel and React, enhancing user experience and system reliability',
+      'Applied best practices including version control, testing, debugging, and performance optimization',
     ],
     emoji: '🏢',
   },
@@ -73,23 +86,9 @@ const ROLES: Role[] = [
     emoji: '🎨',
   },
   {
-    company: 'MCIT',
-    role: 'Full-Stack Web Developer Intern',
-    period: '06/2025 — 07/2025',
-    location: 'Remote',
-    description:
-      'Built and maintained enterprise-level web applications using .NET and SQL Server.',
-    highlights: [
-      'Built responsive front-end interfaces using Bootstrap.',
-      'Optimized client-side performance by implementing modular, memorized React component architectures and a library of reusable UI elements.',
-      'Enhanced data management and application performance through optimized SQL Server queries and modular, reusable application components.',
-    ],
-    emoji: '🌐',
-  },
-  {
     company: 'New Mansoura University',
     role: 'B.Sc. Software Engineering',
-    period: 'Graduating 2026',
+    period: '2026',
     location: 'Mansoura, Egypt',
     description:
       'Faculty of Computer Science and Engineering – Software Engineering Division. CGPA: 3.0',
@@ -114,7 +113,7 @@ export function Experience() {
         <SectionHeading
           eyebrow="Experience"
           title="Where I've worked"
-          description="Building products with small, opinionated teams across multiple internships."
+          description="From internships to a full-time role — building products with small, opinionated teams."
         />
 
         <motion.ol

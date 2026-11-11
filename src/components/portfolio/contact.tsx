@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import * as React from 'react'
 import { motion } from 'framer-motion'
@@ -179,7 +179,7 @@ export function Contact() {
                 <Input
                   id="subject"
                   name="subject"
-                  placeholder="A new product, a question, a helloâ€¦"
+                  placeholder="A new product, a question, a hello…"
                   required
                   className="bg-background/50"
                 />
@@ -214,7 +214,7 @@ export function Contact() {
                   ) : sending ? (
                     <>
                       <span className="mr-2 h-3 w-3 animate-spin rounded-full border-2 border-current border-t-transparent" />
-                      Sendingâ€¦
+                      Sending…
                     </>
                   ) : (
                     <>

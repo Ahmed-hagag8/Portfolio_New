@@ -7,6 +7,7 @@ import {
   Database,
   Cloud,
   GitBranch,
+  Server,
 } from 'lucide-react'
 
 import { fadeUp, scaleIn, staggerContainer } from './motion'
@@ -17,25 +18,33 @@ const SKILL_GROUPS = [
   {
     Icon: Code2,
     title: 'Languages',
-    items: ['PHP', 'JavaScript', 'SQL', 'HTML5', 'CSS3'],
+    items: ['PHP', 'JavaScript', 'TypeScript', 'SQL', 'HTML5', 'CSS3'],
     color: 'from-blue-500/15 to-cyan-500/15',
   },
   {
     Icon: Layers,
     title: 'Frontend',
-    items: ['React', 'Vue.js', 'jQuery', 'Bootstrap'],
+    items: ['React', 'Next.js', 'Vue.js', 'jQuery', 'Tailwind CSS', 'Bootstrap'],
     color: 'from-violet-500/15 to-purple-500/15',
   },
   {
-    Icon: Database,
+    Icon: Server,
     title: 'Backend',
-    items: ['Laravel', 'MySQL', 'RESTful APIs', 'Microservices'],
+    items: [
+      'Laravel',
+      'Filament',
+      'WordPress',
+      'RESTful APIs',
+      'Auth & Authorization',
+      'Microservices',
+      'API Integration',
+    ],
     color: 'from-amber-500/15 to-orange-500/15',
   },
   {
     Icon: Cloud,
-    title: 'Infra',
-    items: ['ngrok', 'Docker', 'Railway'],
+    title: 'Infra & Deployment',
+    items: ['Docker', 'Vercel', 'Railway', 'ngrok'],
     color: 'from-sky-500/15 to-blue-500/15',
   },
   {
@@ -61,6 +70,7 @@ const TOOLS = [
   'Composer',
   'ngrok',
   'Railway',
+  'Vercel',
 ]
 
 export function Skills() {
@@ -76,7 +86,7 @@ export function Skills() {
         <SectionHeading
           eyebrow="Skills"
           title="A T-shaped toolkit"
-          description="Deep in frontend and product engineering, comfortable across the stack — from infrastructure to the last pixel."
+          description="Backend-first and comfortable across the stack — from databases and APIs to admin panels, deployment, and the last pixel."
         />
 
         <motion.div

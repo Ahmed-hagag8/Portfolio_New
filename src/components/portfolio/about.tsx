@@ -12,7 +12,7 @@ const TRAITS = [
     Icon: Code2,
     title: 'Full-Stack Engineering',
     description:
-      'Writing clean, maintainable code. Specializing in Laravel, PHP, React, and MySQL to deliver reliable and scalable solutions.',
+      'Writing clean, maintainable code. Specializing in Laravel, PHP, React, MySQL, WordPress, and Filament to deliver reliable and scalable solutions.',
     gradient: 'from-blue-500/20 to-cyan-500/20',
   },
   {
@@ -26,7 +26,7 @@ const TRAITS = [
     Icon: Palette,
     title: 'Front-End Interfaces',
     description:
-      'Developing responsive, user-centric interfaces using React and Bootstrap to enhance user experience.',
+      'Developing responsive, user-centric interfaces using React, Next.js, TypeScript, and Tailwind CSS to enhance user experience.',
     gradient: 'from-violet-500/20 to-pink-500/20',
   },
   {
@@ -110,21 +110,21 @@ export function About() {
               </h3>
               <div className="mt-4 space-y-4 text-sm text-muted-foreground leading-relaxed sm:text-base">
                 <p>
-                  I am a Full-Stack Web Developer specializing in Laravel, PHP, React, and MySQL, with hands-on experience building secure, scalable, and real-world web applications. 
+                  I am a Full-Stack Web Developer specializing in Laravel, PHP, React, MySQL, WordPress, and Filament, with hands-on experience building secure, scalable, and real-world web applications. 
                 </p>
                 <p>
                   I bring a strong backend mindset with the ability to work across the full application lifecycle — from designing databases and RESTful APIs to integrating frontend interfaces, third-party services, AI solutions, payments, and real-time features.
                 </p>
                 <p>
-                  I focus on writing clean, maintainable code, solving problems efficiently, and building systems that are reliable, scalable, and valuable to the business. I am eager to bring a proactive, learning-oriented mindset to a team where I can contribute from day one.
+                  I focus on writing clean, maintainable code, solving problems efficiently, and building systems that are reliable, scalable, and valuable to the business. I am eager to bring a proactive, learning-oriented mindset to a team, contribute from day one, take ownership of challenges, and continuously improve both the product and the way it is built.
                 </p>
               </div>
             </div>
 
             <div className="flex flex-col gap-4">
               {[
-                { label: 'Currently', value: 'Full-Stack Web Developer' },
-                { label: 'Focus', value: 'Laravel, React & System Architecture' },
+                { label: 'Currently', value: 'Full-Stack Developer @ Union Group' },
+                { label: 'Focus', value: 'Laravel, Filament, React & Next.js' },
                 { label: 'Learning', value: 'Microservices & AI Integration' },
               ].map((item, i) => (
                 <motion.div
